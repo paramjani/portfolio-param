@@ -27,10 +27,12 @@ export default function Resume() {
         transition={{ duration: 0.5, delay: 0.2 }}
         viewport={{ once: true }}
       >
-        <Button size="lg">
-          <FileDown className="mr-2 h-5 w-5" />
-          Download Resume
-        </Button>
+        <a href="/resume.pdf" download>
+          <Button size="lg">
+            <FileDown className="mr-2 h-5 w-5" />
+            Download Resume
+          </Button>
+        </a>
       </motion.div>
     </div>
   )
