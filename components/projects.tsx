@@ -15,7 +15,7 @@ const projects = [
       "An air quality monitoring tool that provides real-time data on pollen levels and air quality metrics. Helps users with allergies and respiratory conditions make informed decisions about outdoor activities.",
     techStack: ["Next.js", "Tailwind CSS", "REST API", "Chart.js"],
     githubLink: "https://github.com/Vishw-modi/Air_Pollen_Index",
-    demoLink: "#",
+    demoLink: "https://air-pollen-index.vercel.app/",
   },
 ]
 
