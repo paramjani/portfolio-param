@@ -6,13 +6,11 @@ import { Progress } from "@/components/ui/progress"
 
 const skills = [
   { name: "Java", level: 85 },
-  { name: "Python", level: 80 },
+  { name: "Python", level: 70 },
   { name: "MySQL", level: 75 },
-  { name: "Git", level: 70 },
+  { name: "Git", level: 50 },
   { name: "HTML/CSS", level: 90 },
-  { name: "JavaScript", level: 85 },
-  { name: "React", level: 80 },
-  { name: "Next.js", level: 75 },
+  { name: "JavaScript", level: 65 },
 ]
 
 export default function Skills() {

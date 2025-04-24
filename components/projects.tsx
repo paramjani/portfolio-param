@@ -10,20 +10,11 @@ import Link from "next/link"
 const projects = [
   {
     id: 1,
-    title: "Smart Telemedicine System",
-    description:
-      "A hackathon project developed under Smart Rural Development initiative. This system enables remote medical consultations and health monitoring for rural areas with limited access to healthcare facilities.",
-    techStack: ["React", "Node.js", "MongoDB", "WebRTC"],
-    githubLink: "#",
-    demoLink: "#",
-  },
-  {
-    id: 2,
     title: "Air Pollen Index Website",
     description:
       "An air quality monitoring tool that provides real-time data on pollen levels and air quality metrics. Helps users with allergies and respiratory conditions make informed decisions about outdoor activities.",
     techStack: ["Next.js", "Tailwind CSS", "REST API", "Chart.js"],
-    githubLink: "#",
+    githubLink: "https://github.com/Vishw-modi/Air_Pollen_Index",
     demoLink: "#",
   },
 ]

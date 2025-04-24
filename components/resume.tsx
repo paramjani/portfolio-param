@@ -27,7 +27,7 @@ export default function Resume() {
         transition={{ duration: 0.5, delay: 0.2 }}
         viewport={{ once: true }}
       >
-        <a href="/resume.pdf" download>
+        <a href="/Profile_New.pdf" download>
           <Button size="lg">
             <FileDown className="mr-2 h-5 w-5" />
             Download Resume
