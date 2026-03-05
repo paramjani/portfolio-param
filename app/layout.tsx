@@ -10,36 +10,55 @@ export const metadata = {
   metadataBase: new URL("https://portfolio-param-tau.vercel.app"),
 
   title: {
-    default: "Param Jani – Computer Engineering Student | Developer Portfolio",
+    default: "Param Jani | Computer Engineering Student Portfolio",
     template: "%s | Param Jani",
   },
 
   description:
-    "Explore the portfolio of Param Jani, a Computer Engineering student skilled in web development, SEO, and hackathons. View projects, skills, and experience.",
+    "Param Jani is a Computer Engineering student passionate about web development, SEO, and hackathons. Explore projects, skills, and portfolio work.",
 
-  generator: "Next.js",
+  keywords: [
+    "Param Jani",
+    "Param Jani Portfolio",
+    "Computer Engineering Student",
+    "Web Developer Portfolio",
+    "SEO Portfolio",
+    "Hackathon Developer",
+  ],
+
+  authors: [{ name: "Param Jani" }],
+
+  creator: "Param Jani",
+
+  robots: {
+    index: true,
+    follow: true,
+  },
 
   alternates: {
-    canonical: "/",
+    canonical: "https://portfolio-param-tau.vercel.app/",
+    languages: {
+      "en-US": "https://portfolio-param-tau.vercel.app/",
+    },
   },
 
   icons: {
     icon: "/favicon.ico",
     shortcut: "/favicon.ico",
-    apple: "/favicon.ico",
+    apple: "/apple-touch-icon.png",
   },
 
   openGraph: {
-    title: "Param Jani – Computer Engineering Student | Developer Portfolio",
+    title: "Param Jani | Computer Engineering Student Portfolio",
     description:
-      "Portfolio of Param Jani showcasing projects, skills, web development work, and hackathon experience.",
+      "Explore Param Jani's developer portfolio featuring projects, skills, SEO knowledge, and hackathon experience.",
     url: "https://portfolio-param-tau.vercel.app/",
     siteName: "Param Jani Portfolio",
     images: [
       {
-        url: "/param_photo.jpeg",
-        width: 800,
-        height: 600,
+        url: "https://portfolio-param-tau.vercel.app/param_photo.jpeg",
+        width: 1200,
+        height: 630,
         alt: "Param Jani Developer Portfolio",
       },
     ],
@@ -49,10 +68,10 @@ export const metadata = {
 
   twitter: {
     card: "summary_large_image",
-    title: "Param Jani – Developer Portfolio",
+    title: "Param Jani Developer Portfolio",
     description:
-      "Explore Param Jani's portfolio featuring web development projects, skills, and hackathon work.",
-    images: ["/param_photo.jpeg"],
+      "Explore projects, skills, and hackathon experience of Param Jani, a Computer Engineering student.",
+    images: ["https://portfolio-param-tau.vercel.app/param_photo.jpeg"],
   },
 }
 
@@ -60,6 +79,7 @@ export const metadata = {
 export const viewport = {
   width: "device-width",
   initialScale: 1,
+  maximumScale: 1,
 }
 
 export default function RootLayout({
@@ -69,6 +89,27 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+
+        {/* Favicon Fix */}
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
+        {/* Hreflang Fix */}
+        <link
+          rel="alternate"
+          href="https://portfolio-param-tau.vercel.app/"
+          hrefLang="en"
+        />
+
+        {/* Canonical Fix */}
+        <link
+          rel="canonical"
+          href="https://portfolio-param-tau.vercel.app/"
+        />
+
+      </head>
+
       <body className={`${inter.className} max-w-6xl mx-auto px-4`}>
         <ThemeProvider
           attribute="class"
@@ -76,7 +117,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          {/* Structured Data */}
+          {/* Structured Data (SEO Boost) */}
           <script
             type="application/ld+json"
             dangerouslySetInnerHTML={{
@@ -89,10 +130,10 @@ export default function RootLayout({
                   "https://portfolio-param-tau.vercel.app/param_photo.jpeg",
                 jobTitle: "Computer Engineering Student",
                 description:
-                  "Computer Engineering student passionate about web development, SEO, and building innovative projects.",
+                  "Computer Engineering student skilled in web development, SEO, and hackathon projects.",
                 sameAs: [
-                  "https://github.com/yourusername",
-                  "https://www.linkedin.com/in/yourusername",
+                  "https://github.com/YOUR_GITHUB",
+                  "https://www.linkedin.com/in/YOUR_LINKEDIN",
                 ],
               }),
             }}
