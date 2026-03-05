@@ -36,9 +36,9 @@ export const metadata = {
   },
 
   alternates: {
-    canonical: "https://portfolio-param-tau.vercel.app/",
+    canonical: "https://portfolio-param-git-master-22ce69-svitvasadacs-projects.vercel.app/",
     languages: {
-      "en-US": "https://portfolio-param-tau.vercel.app/",
+      "en-US": "https://portfolio-param-git-master-22ce69-svitvasadacs-projects.vercel.app//",
     },
   },
 
