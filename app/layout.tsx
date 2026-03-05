@@ -19,9 +19,12 @@ export const metadata = {
 
   metadataBase: new URL("https://portfolio-param-tau.vercel.app"),
 
-  alternates: {
-    canonical: "/",
+alternates: {
+  canonical: "https://portfolio-param-tau.vercel.app/",
+  languages: {
+    "en-US": "https://portfolio-param-tau.vercel.app/",
   },
+},
 
   icons: {
     icon: "/favicon.ico",
