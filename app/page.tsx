@@ -13,18 +13,19 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-background">
       <Navbar />
+
       <main className="container mx-auto px-4 sm:px-6 lg:px-8">
         <section id="home" className="py-20 md:py-32">
           <Hero />
-            {/* Scroll Down Arrow */}
-            <div className="flex justify-center animate-bounce">
-              <Link
-                href="#about"
-                className="rounded-full p-2 bg-primary/10 text-primary"
-              >
-                <ArrowDown size={24} />
-              </Link>
-            </div>
+
+          {/* Scroll Down Arrow Only */}
+          <div className="flex justify-center mt-16 animate-bounce">
+            <Link
+              href="#about"
+              className="rounded-full p-2 bg-primary/10 text-primary"
+            >
+              <ArrowDown size={24} />
+            </Link>
           </div>
         </section>
 
