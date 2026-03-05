@@ -1,7 +1,7 @@
 export const metadata = {
   title: "SEO Consultant | SEO Specialist Services | SEO Expert",
   description:
-    "Professional SEO consultant services to help businesses rank higher on Google, increase organic traffic, and improve search visibility. SEO strategy, keyword research, and optimization.",
+    "Professional SEO consultant services to help businesses rank higher on Google, increase organic traffic, and improve search visibility. SEO strategy and optimization.",
 };
 
 export default function SeoConsultant() {
@@ -37,12 +37,30 @@ export default function SeoConsultant() {
       </ul>
 
       <h2 className="text-2xl font-semibold mt-6">
-        SEO Services I Provide
+        SEO Services & Charges
       </h2>
-      <p className="text-gray-700">
-        As an SEO specialist, I offer comprehensive SEO services tailored to your
-        business. Whether you need SEO for a portfolio website, business site, or
-        local SEO optimization, I can help you achieve sustainable search growth.
+
+      <ul className="mt-4 list-disc pl-6 text-gray-700">
+        <li>
+          <strong>Basic SEO:</strong> ₹3,000 - ₹7,000 / month  
+          <br />
+          Ideal for small websites and local businesses.
+        </li>
+        <li>
+          <strong>Standard SEO:</strong> ₹7,000 - ₹15,000 / month  
+          <br />
+          Best for growing businesses that need improved search visibility.
+        </li>
+        <li>
+          <strong>Premium SEO:</strong> ₹15,000+ / month  
+          <br />
+          Advanced SEO strategy, competitor analysis, and performance optimization.
+        </li>
+      </ul>
+
+      <p className="text-gray-700 mt-4">
+        Pricing depends on project scope and business requirements. Contact me
+        for a customized SEO proposal tailored to your goals.
       </p>
 
       <div className="mt-6">
