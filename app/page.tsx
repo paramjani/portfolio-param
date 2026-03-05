@@ -1,13 +1,13 @@
-import { ArrowDown } from "lucide-react"
-import Link from "next/link"
-import Navbar from "@/components/navbar"
-import Hero from "@/components/hero"
-import About from "@/components/about"
-import Projects from "@/components/projects"
-import Skills from "@/components/skills"
-import Resume from "@/components/resume"
-import Contact from "@/components/contact"
-import Footer from "@/components/footer"
+import { ArrowDown } from "lucide-react";
+import Link from "next/link";
+import Navbar from "@/components/navbar";
+import Hero from "@/components/hero";
+import About from "@/components/about";
+import Projects from "@/components/projects";
+import Skills from "@/components/skills";
+import Resume from "@/components/resume";
+import Contact from "@/components/contact";
+import Footer from "@/components/footer";
 
 export default function Home() {
   return (
@@ -16,10 +16,25 @@ export default function Home() {
       <main className="container mx-auto px-4 sm:px-6 lg:px-8">
         <section id="home" className="py-20 md:py-32">
           <Hero />
-          <div className="flex justify-center mt-16 animate-bounce">
-            <Link href="#about" className="rounded-full p-2 bg-primary/10 text-primary">
-              <ArrowDown size={24} />
+
+          <div className="flex flex-col items-center gap-4 mt-16">
+            {/* SEO Consultant Page Link */}
+            <Link
+              href="/seo-consultant"
+              className="px-6 py-3 bg-primary text-primary-foreground rounded-lg"
+            >
+              SEO Consultant Services
             </Link>
+
+            {/* Scroll Down Arrow */}
+            <div className="flex justify-center animate-bounce">
+              <Link
+                href="#about"
+                className="rounded-full p-2 bg-primary/10 text-primary"
+              >
+                <ArrowDown size={24} />
+              </Link>
+            </div>
           </div>
         </section>
 
@@ -46,5 +61,5 @@ export default function Home() {
 
       <Footer />
     </div>
-  )
+  );
 }
