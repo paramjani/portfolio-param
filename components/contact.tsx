@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion"
 import { Card, CardContent } from "@/components/ui/card"
-import { Linkedin, Mail } from "lucide-react"
+import { Linkedin, Mail, Instagram, Youtube, Facebook, Twitter } from "lucide-react"
 import Link from "next/link"
 
 export default function Contact() {
@@ -22,50 +22,63 @@ export default function Contact() {
         </p>
       </motion.div>
 
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5, delay: 0.2 }}
-        viewport={{ once: true }}
-        className="flex flex-col justify-center"
-      >
-        <Card>
-          <CardContent className="p-6 space-y-6">
-            <div className="flex items-center space-x-4">
-              <div className="bg-primary/10 p-3 rounded-full">
-                <Mail className="h-6 w-6 text-primary" />
-              </div>
-              <div>
-                <h3 className="font-medium">Email</h3>
-                <p className="text-muted-foreground">22ce69@svitvasad.ac.in</p>
-              </div>
-            </div>
+      <Card>
+        <CardContent className="p-6 space-y-6">
 
-            <div className="flex items-center space-x-4">
-              <div className="bg-primary/10 p-3 rounded-full">
-                <Linkedin className="h-6 w-6 text-primary" />
-              </div>
-              <div>
-                <h3 className="font-medium">LinkedIn</h3>
-                <Link
-                  href="https://www.linkedin.com/in/param-v-jani-4ab9651b4/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-primary hover:underline"
-                >
-                  param-v-jani-4ab9651b4
-                </Link>
-              </div>
+          {/* Email */}
+          <div className="flex items-center space-x-4">
+            <Mail className="h-6 w-6 text-primary" />
+            <div>
+              <h3 className="font-medium">Email</h3>
+              <p className="text-muted-foreground">22ce69@svitvasad.ac.in</p>
             </div>
+          </div>
 
-            <div className="mt-8">
-              <p className="text-lg">
-                I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.
-              </p>
-            </div>
-          </CardContent>
-        </Card>
-      </motion.div>
+          {/* LinkedIn */}
+          <div className="flex items-center space-x-4">
+            <Linkedin className="h-6 w-6 text-primary" />
+            <Link
+              href="https://www.linkedin.com/in/param-v-jani-4ab9651b4/"
+              target="_blank"
+            >
+              LinkedIn
+            </Link>
+          </div>
+
+          {/* Instagram */}
+          <div className="flex items-center space-x-4">
+            <Instagram className="h-6 w-6 text-primary" />
+            <Link href="https://instagram.com/yourusername" target="_blank">
+              Instagram
+            </Link>
+          </div>
+
+          {/* YouTube */}
+          <div className="flex items-center space-x-4">
+            <Youtube className="h-6 w-6 text-primary" />
+            <Link href="https://youtube.com/@yourchannel" target="_blank">
+              YouTube
+            </Link>
+          </div>
+
+          {/* Facebook */}
+          <div className="flex items-center space-x-4">
+            <Facebook className="h-6 w-6 text-primary" />
+            <Link href="https://facebook.com/yourpage" target="_blank">
+              Facebook
+            </Link>
+          </div>
+
+          {/* X / Twitter */}
+          <div className="flex items-center space-x-4">
+            <Twitter className="h-6 w-6 text-primary" />
+            <Link href="https://x.com/yourusername" target="_blank">
+              X (Twitter)
+            </Link>
+          </div>
+
+        </CardContent>
+      </Card>
     </div>
   )
 }
