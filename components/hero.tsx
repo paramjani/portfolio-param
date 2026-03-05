@@ -22,7 +22,7 @@ export default function Hero() {
         transition={{ duration: 0.5, delay: 0.2 }}
         className="mb-8"
       >
-        <p className="text-xl md:text-2xl text-muted-foreground">Aspiring Engineer | Hackathon Enthusiast</p>
+        <p className="text-xl md:text-2xl text-muted-foreground">SEO EXPERT | SEO CONSULTANT </p>
       </motion.div>
 
       <motion.div
