@@ -30,7 +30,7 @@ export default function Contact() {
             <Mail className="h-6 w-6 text-primary" />
             <div>
               <h3 className="font-medium">Email</h3>
-              <p className="text-muted-foreground">22ce69@svitvasad.ac.in</p>
+              <p className="text-muted-foreground">janiparam61@gmail.com</p>
             </div>
           </div>
 
@@ -48,7 +48,7 @@ export default function Contact() {
           {/* Instagram */}
           <div className="flex items-center space-x-4">
             <Instagram className="h-6 w-6 text-primary" />
-            <Link href="https://instagram.com/yourusername" target="_blank">
+            <Link href="https://www.instagram.com/justparamthings_/" target="_blank">
               Instagram
             </Link>
           </div>
@@ -56,7 +56,7 @@ export default function Contact() {
           {/* YouTube */}
           <div className="flex items-center space-x-4">
             <Youtube className="h-6 w-6 text-primary" />
-            <Link href="https://youtube.com/@yourchannel" target="_blank">
+            <Link href="https://www.youtube.com/@paramjani6650" target="_blank">
               YouTube
             </Link>
           </div>
@@ -64,7 +64,7 @@ export default function Contact() {
           {/* Facebook */}
           <div className="flex items-center space-x-4">
             <Facebook className="h-6 w-6 text-primary" />
-            <Link href="https://facebook.com/yourpage" target="_blank">
+            <Link href="https://www.facebook.com/param.jani.75/" target="_blank">
               Facebook
             </Link>
           </div>
@@ -72,7 +72,7 @@ export default function Contact() {
           {/* X / Twitter */}
           <div className="flex items-center space-x-4">
             <Twitter className="h-6 w-6 text-primary" />
-            <Link href="https://x.com/yourusername" target="_blank">
+            <Link href="https://x.com/ParamJani2" target="_blank">
               X (Twitter)
             </Link>
           </div>
