@@ -16,16 +16,6 @@ export default function Home() {
       <main className="container mx-auto px-4 sm:px-6 lg:px-8">
         <section id="home" className="py-20 md:py-32">
           <Hero />
-
-          <div className="flex flex-col items-center gap-4 mt-16">
-            {/* SEO Consultant Page Link */}
-            <Link
-              href="/seo-consultant"
-              className="px-6 py-3 bg-primary text-primary-foreground rounded-lg"
-            >
-              SEO Consultant Services
-            </Link>
-
             {/* Scroll Down Arrow */}
             <div className="flex justify-center animate-bounce">
               <Link
