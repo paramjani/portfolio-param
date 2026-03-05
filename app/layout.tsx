@@ -6,29 +6,34 @@ import Image from "next/image"
 
 const inter = Inter({ subsets: ["latin"] })
 
-// SEO Metadata
 export const metadata = {
-  title: "Param Jani | Portfolio",
-  description:
-    "Portfolio website of Param Jani, Computer Engineering student and Hackathon Enthusiast",
-  generator: "v0.dev",
-
-  // Canonical URL
-  alternates: {
-    canonical: "https://portfolio-param-tau.vercel.app/",
+  title: {
+    default: "Param Jani | Portfolio",
+    template: "%s | Param Jani",
   },
 
-  // Favicon
+  description:
+    "Portfolio website of Param Jani, Computer Engineering student, developer and hackathon enthusiast.",
+
+  generator: "Next.js",
+
+  metadataBase: new URL("https://portfolio-param-tau.vercel.app"),
+
+  alternates: {
+    canonical: "/",
+  },
+
   icons: {
     icon: "/favicon.ico",
+    shortcut: "/favicon.ico",
+    apple: "/favicon.ico",
   },
 
-  // Open Graph (for social sharing)
   openGraph: {
     title: "Param Jani | Portfolio",
     description:
       "Portfolio of Param Jani - Computer Engineering Student, Developer and Hackathon Enthusiast",
-    url: "https://portfolio-param-tau.vercel.app/",
+    url: "https://portfolio-param-tau.vercel.app",
     siteName: "Param Jani Portfolio",
     images: [
       {
@@ -40,6 +45,14 @@ export const metadata = {
     ],
     locale: "en_US",
     type: "website",
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    title: "Param Jani | Portfolio",
+    description:
+      "Portfolio of Param Jani - Computer Engineering Student and Developer",
+    images: ["/param_photo.jpeg"],
   },
 }
 
@@ -72,12 +85,15 @@ export default function RootLayout({
                 "@context": "https://schema.org",
                 "@type": "Person",
                 name: "Param Jani",
-                url: "https://portfolio-param-tau.vercel.app/",
-                image: "https://portfolio-param-tau.vercel.app/param_photo.jpeg",
+                url: "https://portfolio-param-tau.vercel.app",
+                image:
+                  "https://portfolio-param-tau.vercel.app/param_photo.jpeg",
                 jobTitle: "Computer Engineering Student",
+                description:
+                  "Computer Engineering student passionate about development, SEO, and hackathons.",
                 sameAs: [
                   "https://github.com/",
-                  "https://linkedin.com/"
+                  "https://www.linkedin.com/"
                 ],
               }),
             }}
