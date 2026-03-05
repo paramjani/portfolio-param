@@ -7,24 +7,21 @@ import Image from "next/image"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata = {
+  metadataBase: new URL("https://portfolio-param-tau.vercel.app"),
+
   title: {
-    default: "Param Jani | Portfolio",
+    default: "Param Jani – Computer Engineering Student | Developer Portfolio",
     template: "%s | Param Jani",
   },
 
   description:
-    "Portfolio website of Param Jani, Computer Engineering student, developer and hackathon enthusiast.",
+    "Explore the portfolio of Param Jani, a Computer Engineering student skilled in web development, SEO, and hackathons. View projects, skills, and experience.",
 
   generator: "Next.js",
 
-  metadataBase: new URL("https://portfolio-param-tau.vercel.app"),
-
-alternates: {
-  canonical: "https://portfolio-param-tau.vercel.app/",
-  languages: {
-    "en-US": "https://portfolio-param-tau.vercel.app/",
+  alternates: {
+    canonical: "/",
   },
-},
 
   icons: {
     icon: "/favicon.ico",
@@ -33,17 +30,17 @@ alternates: {
   },
 
   openGraph: {
-    title: "Param Jani | Portfolio",
+    title: "Param Jani – Computer Engineering Student | Developer Portfolio",
     description:
-      "Portfolio of Param Jani - Computer Engineering Student, Developer and Hackathon Enthusiast",
-    url: "https://portfolio-param-tau.vercel.app",
+      "Portfolio of Param Jani showcasing projects, skills, web development work, and hackathon experience.",
+    url: "https://portfolio-param-tau.vercel.app/",
     siteName: "Param Jani Portfolio",
     images: [
       {
         url: "/param_photo.jpeg",
         width: 800,
         height: 600,
-        alt: "Param Jani Portfolio",
+        alt: "Param Jani Developer Portfolio",
       },
     ],
     locale: "en_US",
@@ -52,14 +49,14 @@ alternates: {
 
   twitter: {
     card: "summary_large_image",
-    title: "Param Jani | Portfolio",
+    title: "Param Jani – Developer Portfolio",
     description:
-      "Portfolio of Param Jani - Computer Engineering Student and Developer",
+      "Explore Param Jani's portfolio featuring web development projects, skills, and hackathon work.",
     images: ["/param_photo.jpeg"],
   },
 }
 
-// Mobile responsiveness
+// Mobile responsive viewport
 export const viewport = {
   width: "device-width",
   initialScale: 1,
@@ -79,8 +76,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-
-          {/* Structured Data for SEO */}
+          {/* Structured Data */}
           <script
             type="application/ld+json"
             dangerouslySetInnerHTML={{
@@ -88,15 +84,15 @@ export default function RootLayout({
                 "@context": "https://schema.org",
                 "@type": "Person",
                 name: "Param Jani",
-                url: "https://portfolio-param-tau.vercel.app",
+                url: "https://portfolio-param-tau.vercel.app/",
                 image:
                   "https://portfolio-param-tau.vercel.app/param_photo.jpeg",
                 jobTitle: "Computer Engineering Student",
                 description:
-                  "Computer Engineering student passionate about development, SEO, and hackathons.",
+                  "Computer Engineering student passionate about web development, SEO, and building innovative projects.",
                 sameAs: [
-                  "https://github.com/",
-                  "https://www.linkedin.com/"
+                  "https://github.com/yourusername",
+                  "https://www.linkedin.com/in/yourusername",
                 ],
               }),
             }}
@@ -106,7 +102,7 @@ export default function RootLayout({
           <div className="w-full flex justify-center py-6">
             <Image
               src="/param_photo.jpeg"
-              alt="Param Jani Portfolio Profile Photo"
+              alt="Param Jani Developer Portfolio Profile Photo"
               width={120}
               height={120}
               className="rounded-full border-4 border-primary shadow-md"
@@ -115,7 +111,6 @@ export default function RootLayout({
           </div>
 
           {children}
-
         </ThemeProvider>
       </body>
     </html>
