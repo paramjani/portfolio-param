@@ -7,16 +7,16 @@ export const metadata = {
 export default function SeoConsultant() {
   return (
     <main className="max-w-4xl mx-auto p-6 text-gray-200">
+
       <h1 className="text-4xl font-extrabold mb-6 text-white">
         Professional SEO Consultant & SEO Specialist Services
       </h1>
 
       <p className="text-lg font-semibold leading-relaxed">
-        I am an experienced <strong className="text-white">SEO consultant and SEO specialist</strong>{" "}
-        dedicated to helping businesses improve their Google rankings, increase organic
-        traffic, and achieve sustainable long-term growth. My SEO strategies are
-        data-driven, transparent, and focused on delivering measurable results that
-        improve online visibility and attract high-quality customers.
+        I am an experienced <strong className="text-white">SEO consultant and SEO specialist</strong> dedicated to helping businesses improve their Google rankings,
+        increase organic traffic, and achieve sustainable long-term growth. My SEO
+        strategies are data-driven, transparent, and focused on delivering measurable
+        results that improve online visibility and attract high-quality customers.
       </p>
 
       <h2 className="text-2xl font-bold mt-8 text-white">
@@ -60,7 +60,7 @@ export default function SeoConsultant() {
 
       <p className="mt-3 font-medium">
         I offer flexible SEO service packages designed to support businesses at
-        different growth stages.
+        different stages of growth.
       </p>
 
       <ul className="mt-5 list-disc pl-6 space-y-4 font-semibold">
@@ -70,7 +70,7 @@ export default function SeoConsultant() {
           </strong>
           <br />
           Ideal for small websites and local businesses that want to establish
-          a strong online presence and start ranking on Google.
+          their online presence and start ranking on Google.
         </li>
 
         <li>
@@ -78,8 +78,8 @@ export default function SeoConsultant() {
             Standard SEO – ₹7,000 to ₹15,000 / month
           </strong>
           <br />
-          Best suited for growing businesses aiming to improve search rankings,
-          increase organic traffic, and gain consistent leads.
+          Best for growing businesses aiming to improve search rankings,
+          increase organic traffic, and generate consistent leads.
         </li>
 
         <li>
@@ -99,14 +99,42 @@ export default function SeoConsultant() {
         revenue growth.
       </p>
 
-      <div className="mt-8">
+      <p className="mt-6 font-semibold text-white">
+        Talk directly with an SEO expert and get a personalized strategy for your business.
+      </p>
+
+      {/* CTA Buttons */}
+
+      <div className="mt-8 flex flex-col sm:flex-row gap-4">
+
+        {/* Consultation Button */}
         <a
           href="/#contact"
-          className="px-7 py-3 bg-primary text-primary-foreground rounded-lg font-bold hover:opacity-90 transition"
+          className="px-7 py-3 bg-primary text-primary-foreground rounded-lg font-bold hover:opacity-90 transition text-center"
         >
-          Get a Free SEO Consultation
+          Get Free SEO Consultation
         </a>
+
+        {/* Call Button */}
+        <a
+          href="tel:+917862005679"
+          className="px-7 py-3 bg-green-600 text-white rounded-lg font-bold hover:bg-green-700 transition text-center"
+        >
+          📞 Call Now
+        </a>
+
+        {/* WhatsApp Button */}
+        <a
+          href="https://wa.me/917862005679?text=Hello%20I%20am%20interested%20in%20your%20SEO%20services"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="px-7 py-3 bg-[#25D366] text-white rounded-lg font-bold hover:bg-[#1ebe5d] transition text-center"
+        >
+          💬 Chat on WhatsApp
+        </a>
+
       </div>
+
     </main>
   );
 }
