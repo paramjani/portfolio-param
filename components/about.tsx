@@ -26,7 +26,7 @@ export default function About() {
         <Card>
           <CardContent className="pt-6">
             <p className="text-lg leading-relaxed mb-4">
-              I’m <strong>Param Jani</strong>, a third-year Computer Engineering student passionate about Web Development and Search Engine Optimization (SEO). I am establishing my career as an <strong>SEO Expert</strong>, <strong>SEO Consultant</strong>, and <strong>SEO Specialist</strong>, helping websites improve search visibility, drive organic traffic, and achieve digital growth.
+              I’m <strong>Param Jani</strong>, a final-year Computer Engineering student passionate about Web Development and Search Engine Optimization (SEO). I am establishing my career as an <strong>SEO Expert</strong>, <strong>SEO Consultant</strong>, and <strong>SEO Specialist</strong>, helping websites improve search visibility, drive organic traffic, and achieve digital growth.
             </p>
 
             <p className="text-lg leading-relaxed mb-4">
