@@ -16,10 +16,11 @@ export default function Home() {
       <Navbar />
 
       <main className="container mx-auto px-4 sm:px-6 lg:px-8">
+        
         <section id="home" className="py-20 md:py-32">
           <Hero />
 
-          {/* Scroll Down Arrow Only */}
+          {/* Scroll Down Arrow */}
           <div className="flex justify-center mt-16 animate-bounce">
             <Link
               href="#about"
@@ -43,7 +44,7 @@ export default function Home() {
         </section>
 
         <section id="blogs" className="py-20">
-        <Blogs />
+          <Blogs />
         </section>
 
         <section id="resume" className="py-20">
@@ -53,6 +54,7 @@ export default function Home() {
         <section id="contact" className="py-20">
           <Contact />
         </section>
+
       </main>
 
       <Footer />
