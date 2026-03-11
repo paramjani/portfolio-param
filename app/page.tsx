@@ -43,7 +43,7 @@ export default function Home() {
         </section>
 
         <section id="blogs" className="py-20">
-        <Skills />
+        <Blogs />
         </section>
 
         <section id="resume" className="py-20">
