@@ -105,6 +105,19 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             })(window,document,'script','dataLayer','GTM-W8JJHRS8');`,
           }}
         />
+
+        {/* Google Tag (gtag.js for GA4) */}
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-B0HXGSWKS9"></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-B0HXGSWKS9');
+            `,
+          }}
+        />
       </head>
 
       <body className={`${inter.className} max-w-6xl mx-auto px-4`}>
