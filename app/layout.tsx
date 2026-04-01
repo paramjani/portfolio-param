@@ -1,10 +1,12 @@
-// app/layout.tsx
+"use client";
+
 import type React from "react";
 import "@/app/globals.css";
 import { Inter } from "next/font/google";
 import { ThemeProvider } from "@/components/theme-provider";
 import Image from "next/image";
-import GTMPageviewTracker from "@/components/GTMPageviewTracker"; // Client Component
+import { usePathname } from "next/navigation";
+import { useEffect } from "react";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -66,8 +68,19 @@ export const metadata = {
 // Mobile viewport
 export const viewport = { width: "device-width", initialScale: 1, maximumScale: 1 };
 
-// Root Layout
 export default function RootLayout({ children }: { children: React.ReactNode }) {
+  const pathname = usePathname();
+
+  // SPA pageview tracking
+  useEffect(() => {
+    if (typeof window !== "undefined" && (window as any).dataLayer) {
+      (window as any).dataLayer.push({
+        event: "pageview",
+        page: pathname,
+      });
+    }
+  }, [pathname]);
+
   return (
     <html lang="en">
       <head>
@@ -79,7 +92,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <link rel="alternate" href="https://portfolio-param-tau.vercel.app/" hrefLang="en" />
         <link rel="canonical" href="https://portfolio-param-tau.vercel.app/" />
 
-        {/* Google Tag (gtag.js) */}
+        {/* Google Tag (gtag.js for GA4) */}
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-B0HXGSWKS9"></script>
         <script
           dangerouslySetInnerHTML={{
@@ -92,7 +105,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           }}
         />
 
-        {/* Google Tag Manager (Head) */}
+        {/* Google Tag Manager (Head snippet) */}
         <script
           dangerouslySetInnerHTML={{
             __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -105,7 +118,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       </head>
 
       <body className={`${inter.className} max-w-6xl mx-auto px-4`}>
-        {/* Google Tag Manager (Body) */}
+        {/* Google Tag Manager (Body snippet) */}
         <noscript>
           <iframe
             src="https://www.googletagmanager.com/ns.html?id=GTM-W8JJHRS8"
@@ -117,9 +130,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
         {/* Theme Provider */}
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
-          {/* SPA Pageview Tracker */}
-          <GTMPageviewTracker />
-
           {/* Structured Data for SEO */}
           <script
             type="application/ld+json"
