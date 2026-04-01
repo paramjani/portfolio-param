@@ -1,10 +1,10 @@
-import type React from "react"
-import "@/app/globals.css"
-import { Inter } from "next/font/google"
-import { ThemeProvider } from "@/components/theme-provider"
-import Image from "next/image"
+import type React from "react";
+import "@/app/globals.css";
+import { Inter } from "next/font/google";
+import { ThemeProvider } from "@/components/theme-provider";
+import Image from "next/image";
 
-const inter = Inter({ subsets: ["latin"] })
+const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
   metadataBase: new URL("https://portfolio-param-tau.vercel.app"),
@@ -36,9 +36,11 @@ export const metadata = {
   },
 
   alternates: {
-    canonical: "https://portfolio-param-git-master-22ce69-svitvasadacs-projects.vercel.app/",
+    canonical:
+      "https://portfolio-param-git-master-22ce69-svitvasadacs-projects.vercel.app/",
     languages: {
-      "en-US": "https://portfolio-param-git-master-22ce69-svitvasadacs-projects.vercel.app//",
+      "en-US":
+        "https://portfolio-param-git-master-22ce69-svitvasadacs-projects.vercel.app//",
     },
   },
 
@@ -73,51 +75,58 @@ export const metadata = {
       "Explore projects, skills, and hackathon experience of Param Jani, a Computer Engineering student.",
     images: ["https://portfolio-param-tau.vercel.app/param_photo.jpeg"],
   },
-}
+};
 
-// Mobile responsive viewport
 export const viewport = {
   width: "device-width",
   initialScale: 1,
   maximumScale: 1,
-}
+};
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode
-}) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
       <head>
-
-        {/* Favicon Fix */}
+        {/* Favicon */}
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 
-        {/* Hreflang Fix */}
-        <link
-          rel="alternate"
-          href="https://portfolio-param-tau.vercel.app/"
-          hrefLang="en"
-        />
+        {/* Hreflang */}
+        <link rel="alternate" href="https://portfolio-param-tau.vercel.app/" hrefLang="en" />
 
-        {/* Canonical Fix */}
-        <link
-          rel="canonical"
-          href="https://portfolio-param-tau.vercel.app/"
-        />
+        {/* Canonical */}
+        <link rel="canonical" href="https://portfolio-param-tau.vercel.app/" />
 
+        {/* Google Tag Manager (Head) */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+              new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+              j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+              'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+            })(window,document,'script','dataLayer','GTM-5DNPJHNB');`,
+          }}
+        />
       </head>
 
       <body className={`${inter.className} max-w-6xl mx-auto px-4`}>
+        {/* Google Tag Manager (Body) */}
+        <noscript>
+          <iframe
+            src="https://www.googletagmanager.com/ns.html?id=GTM-5DNPJHNB"
+            height="0"
+            width="0"
+            style={{ display: "none", visibility: "hidden" }}
+          ></iframe>
+        </noscript>
+
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
           enableSystem
           disableTransitionOnChange
         >
-          {/* Structured Data (SEO Boost) */}
+          {/* Structured Data for SEO */}
           <script
             type="application/ld+json"
             dangerouslySetInnerHTML={{
@@ -126,8 +135,7 @@ export default function RootLayout({
                 "@type": "Person",
                 name: "Param Jani",
                 url: "https://portfolio-param-tau.vercel.app/",
-                image:
-                  "https://portfolio-param-tau.vercel.app/param_photo.jpeg",
+                image: "https://portfolio-param-tau.vercel.app/param_photo.jpeg",
                 jobTitle: "Computer Engineering Student",
                 description:
                   "Computer Engineering student skilled in web development, SEO, and hackathon projects.",
@@ -155,5 +163,5 @@ export default function RootLayout({
         </ThemeProvider>
       </body>
     </html>
-  )
+  );
 }
